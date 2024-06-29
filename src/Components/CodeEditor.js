@@ -41,7 +41,14 @@ const CodeEditor = (props) => {
         A simple no-frills code editor with syntax highlighting.
       </div>
       <button type="submit" className="github-button">
-        GitHub
+        <a
+          href="https://github.com/sagar888299/React-Code-Highlighter"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
+          GitHub
+        </a>
       </button>
       <div className="code-edit-container">
         <textarea
