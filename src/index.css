@@ -1,13 +1,131 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  display: block;
+  font-size: 0.8rem;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-family: "PT Mono", monospace;
+}
+
+.parent-code-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 5rem;
+  gap: 1rem;
+  font-family: "Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;";
+}
+
+.code-editor-heading {
+  display: block;
+  font-size: 2.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+.github-button {
+  font-family: Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  display: inline-block;
+  padding: 2px 15px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.github-button:hover {
+  background-color: #f87171; 
+  color: black; 
+}
+
+
+.code-editor-subheading {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+  max-width: 300px;
+}
+
+.code-edit-container {
+  position: relative;
+  width: 600px;
+  word-wrap: break-word;
+  background-color: hsl(212, 35%, 95%);
+}
+
+.code-input,
+.code-output {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border: none;
+  font-size: 10px;
+  background: transparent;
+  line-height: 1.5em;
+  font-size: 1rem;
+  background-color: hsl(212, 35%, 95%);
+}
+
+.code-input {
+  opacity: 1;
+  margin: 0;
+}
+
+.code-output {
+  pointer-events: none;
+  overflow-x: hidden;
+  z-index: 3;
+  margin: 0;
+  color: black;
+}
+
+.code-input,
+.code-output {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  color: black;
+}
+
+.code-edit-container :not(pre) > code[class*="language-"],
+.code-edit-container pre[class*="language-"] {
+  background: transparent;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  background: none !important;
+  box-shadow: none !important;
+  color: gray !important;
 }
